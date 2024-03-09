@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <title>Weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="app.css">
+
+    <script src="https://kit.fontawesome.com/efc5162c92.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-dark d-flex flex-column">
+    <div class="get-weather d-flex justify-content-center">
+        <div class="card" style="width: 22rem;">
+            <form class="d-flex mx-2 search-form my-3" role="search">
+
+                <input class="search-input" type="search" placeholder="Enter city name" aria-label="Search" autofocus>
+
+                <button class="search-button" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 21">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </button>
+            </form>
+            <div class="error d-flex flex-column align-items-center d-none">
+                <img class="card-img-top error-image" src="images/404.png">
+                <h3 class="card-title text-center error-message">Error: Invalid City</h3>
+            </div>
+
+            <div class="card-body found-data d-flex flex-column align-items-center d-none">
+                <img class="card-img-top weather-image" alt="" src="">
+                <h1 class="card-title text-center temperature"></h1>
+                <h6 class="card-title text-center city-name"></h6>
+
+                <div class="description">
+                </div>
+                <div class="d-flex humidity-and-wind justify-content-evenly mt-4 w-100">
+                    <div class="d-flex flex-column justify-content-evenly align-items-center">
+                        <i class="fa-solid fa-water"></i>
+                        <div class="humidity"></div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-evenly align-items-center">
+                        <i class="fa-solid fa-wind"></i>
+                        <div class="wind-speed mt-2"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer class="mt-auto">
+        <p class="text-secondary text-center">
+            Made by Chirag Punia &nbsp;
+            <a href="https://github.com/harshey0" class="badge bg-secondary text-decoration-none">Github</a>
+            <a href="https://linkedin.com/in/harshit-sethi00/"
+                class="badge bg-secondary text-decoration-none">Linkedin</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
